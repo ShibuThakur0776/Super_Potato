@@ -127,11 +127,61 @@
 
 //Problem Statement 
 //Sqaure each element inside of it 
-let matrics = [
-    [1,2,3],
-    [4,5,6],
-    [7,8,9]
-];
+// let matrics = [
+//     [1,2,3],
+//     [4,5,6],
+//     [7,8,9]
+// ];
 
-let ans = matrics.map((arr)=>arr.map((i)=>i*i));
+// let ans = matrics.map((arr)=>arr.map((i)=>i*i));
+// console.log(ans);
+
+//filter --> like map but appy some condition on the elements of array.
+//output--> true/false
+// let myArr = [1,2,5,7,8,2,6,9,13,17];
+
+// let evenArr = myArr.filter(function(num){
+//     return num%2 == 1;
+// })
+
+// console.log(evenArr);
+
+//whether the isPrime number or not
+//Approach firstly find num factor == 2, arr = then fiter those element out   
+//boolean[0,1,1,0,0,0,0,0,0,1]
+// let primeNumber = [1,2,7,4,8,9,10,18,20,13];
+// let isPrime =[];
+// for(let i=0;i<primeNumber.length;i++){
+//     let num = primeNumber[i], count =0;
+//     for(let j=1;j<=num;j++){
+//         if(num%j==0){
+//             count = count+1;
+//         }
+//     }
+//     if(count==2){
+//         isPrime[i] = true;
+//     }else{
+//         isPrime[i] = false;
+//     }
+// }
+
+let primeNumber = [1,2,7,4,8,9,10,18,20,13];
+let isPrime = [];
+primeNumber.map((num,i,)=>{
+    let count =0;
+    for(let j=1; j<=num; j++){
+        if(num%j==0){
+            count = count+1;
+        }
+    }
+    if(count==2) isPrime[i]=1;
+    else isPrime[i]=0;
+    return isPrime;
+});
+console.log(primeNumber);
+console.log(isPrime);
+
+let ans = primeNumber.filter((ele,i)=>{
+    return (isPrime[i]==1);
+});
 console.log(ans);
