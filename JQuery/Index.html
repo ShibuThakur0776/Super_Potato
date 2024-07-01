@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+</head>
+<body>
+    <div class="test-1"> 
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste ad temporibus rem quasi, incidunt eos consequuntur eligendi? Exercitationem consequatur, quibusdam maiores dignissimos asperiores soluta, odio vero illum voluptatum, velit ducimus!
+    </div>
+    <div class="test-2">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum eaque aperiam eveniet reprehenderit, dolores cumque eum fugit rerum tempora veritatis a, adipisci in ab neque perferendis sed? Repellat, id optio.
+    </div>
+
+    <ul id="list">
+        <li class="list-item">BMW</li>
+        <li class="list-item">Mercedes</li>
+        <li class="list-item">Jaguar</li>
+    </ul>
+</body>
+</html>
+<script src="./jquery/jquery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var a = $('.test-1').html();
+        console.log(a);
+
+        var b = $('.test-2').html();
+        console.log(b);
+
+        $("#list").css("border","2px solid red");
+        $(".list-item").css("text-transform","uppercase");
+    })
+</script>
