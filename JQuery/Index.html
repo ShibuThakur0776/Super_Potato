@@ -18,18 +18,53 @@
         <li class="list-item">Mercedes</li>
         <li class="list-item">Jaguar</li>
     </ul>
+    <br/>
+    <button class="btn">Click Me !</button>
 </body>
 </html>
 <script src="./jquery/jquery-3.7.1.min.js"></script>
 <script>
     $(document).ready(function(){
-        var a = $('.test-1').html();
-        console.log(a);
+        // var a = $('.test-1').html();
+        // console.log(a);
 
-        var b = $('.test-2').html();
-        console.log(b);
+        // var b = $('.test-2').html();
+        // console.log(b);
 
-        $("#list").css("border","2px solid red");
-        $(".list-item").css("text-transform","uppercase");
-    })
+        // $("#list").css("border","2px solid red");
+        // $(".list-item").css("text-transform","uppercase");
+
+        // $(".btn").click(function(){
+        //     alert("You Clicked Me !!");
+        // });
+
+        // $(".btn").dblclick(function(){
+        //     alert("Double Clicked Me !!");
+        // });
+
+        // $(".btn").contextmenu(function(){
+        //     alert("Context Menu Clicked !!");
+        // });
+
+        // $(".btn").mouseenter(function(){
+        //     $(this).css("transform","translateY(-10px)");
+        // });
+
+        // $(".btn").mouseleave(function(){
+        //     $(this).css("transform","translateY(0px)");
+        // });
+
+        $("body").keypress(function(){
+            $(this).css("background-color","red");
+        });
+
+        $("body").keyup(function(){
+            $(this).css("background-color","green");
+        })
+
+        $("body").keydown(function(){
+            $(this).css("background-color","orange");
+        });
+        
+    });
 </script>
