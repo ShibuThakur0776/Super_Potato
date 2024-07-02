@@ -165,23 +165,38 @@
 //     }
 // }
 
-let primeNumber = [1,2,7,4,8,9,10,18,20,13];
-let isPrime = [];
-primeNumber.map((num,i,)=>{
-    let count =0;
-    for(let j=1; j<=num; j++){
-        if(num%j==0){
-            count = count+1;
-        }
-    }
-    if(count==2) isPrime[i]=1;
-    else isPrime[i]=0;
-    return isPrime;
-});
-console.log(primeNumber);
-console.log(isPrime);
+// let primeNumber = [1,2,7,4,8,9,10,18,20,13];
+// let isPrime = [];
+// primeNumber.map((num,i,)=>{
+//     let count =0;
+//     for(let j=1; j<=num; j++){
+//         if(num%j==0){
+//             count = count+1;
+//         }
+//     }
+//     if(count==2) isPrime[i]=1;
+//     else isPrime[i]=0;
+//     return isPrime;
+// });
+// console.log(primeNumber);
+// console.log(isPrime);
 
-let ans = primeNumber.filter((ele,i)=>{
-    return (isPrime[i]==1);
-});
-console.log(ans);
+// let ans = primeNumber.filter((ele,i)=>{
+//     return (isPrime[i]==1);
+// });
+// console.log(ans);
+
+
+//Reduce --> Reduce array into one value.
+//Output --> Single value return.
+
+// let arr = [1,2,3,4,5];
+// let totalSum = arr.reduce(function(acc,num){
+//     acc = acc + num;
+//     console.log(acc);
+//     return acc;
+// },0)
+
+
+
+
