@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form-event</title>
+    <style>
+    .test{
+        border: 2px solid black;
+        padding: 10px;
+        background-color: aliceblue;
+    }
+    </style>
+</head>
+
+<body>
+    <form method="post" id="sform">
+        <label for="name">Name :</label>
+        <input type="text" id="name"/>
+        <br />
+        <br />
+        <label for="age">Age :</label>
+        <input type="number" id="age"/>
+        <br />
+        <br />
+        <label>Select Skills :</label>
+        <select name="skill" id="skill">
+            <option value="html">Html</option>
+            <option value="css">Css</option>
+            <option value="jquery">Jquery</option>
+        </select>
+        <br />
+        <div class="test"></div>
+        <button type="submit" id="submit">submit</button>
+    </form>
+</body>
+
+</html>
+<script src="jquery/jquery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#name,#age,#skill').focus(function(){
+            $(this).css('background-color','red');
+        });
+
+        $('#name,#age,#skill').blur(function(){
+            $(this).css('background-color','');
+        });
+
+        $('#name').select(function(){
+            $(this).css('background-color',"yellow");
+        });
+
+
+        $('#skill').change(function(){
+            $(this).css('background-color','pink')
+            var a = $(this).val();
+            $('.test').html(a);
+        });
+
+        $('#sform').submit(function(){
+            alert("Form Submitted");
+        });
+    });
+</script>
