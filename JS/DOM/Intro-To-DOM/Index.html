@@ -14,19 +14,39 @@
         <p>This is paragraph</p>
 
         <!-- On button click append the hello to the page. -->
-        <button class="test-1" id="btn-1">Don't Click Me !</button>
+         <button class="test-1" id="btn-1">Don't Click Me !</button>
          <button class="test-1" id="btn">Click Me !</button>
          <!-- basically three type selector we have in JS to select an element -->
-          <ul>
+         <ul>
             <li>getElementById</li>
             <li>QuerySelector</li>
             <li>QuerySelectorAll</li>
           </ul>
     </div>
+
+
 </body>
 </html>
 
 <script>
+    //DOM --> Document Object Model
+
+    //DOM Hirearchy Elemeent Tree
+    //       Window
+    //          |
+    //      Document 
+    //          |
+    //         html
+    //        /    \
+    //       /      \
+    //     body      head
+    //    /  \        /   \
+    //   /    \      /     \
+    // div    div  title   meta
+    // /       / \          
+    //h2      h1  p
+    
+    
     // //Three ways to getElementBy --> Id, ClassName, TagName
     // let elementById =document.getElementById('btn');
     // console.log(elementById);
@@ -39,14 +59,13 @@
 
     // //Query Selector --> you can access all three of them by query selector and specifiying what type of selection you want --> Id (#), ClassName(.), TagName(p)
 
-    let querySelectorId = document.querySelector('#btn');
-    console.log(querySelectorId);
+    // let querySelectorId = document.querySelector('#btn');
+    // console.log(querySelectorId);
 
-    let querySelectorClassName = document.querySelector('.test-1');
-    console.log(querySelectorClassName);
+    // let querySelectorClassName = document.querySelector('.test-1');
+    // console.log(querySelectorClassName);
 
-    let querySelectorTagName = document.querySelector('button');
-    console.log(querySelectorTagName)
-
+    // let querySelectorTagName = document.querySelector('button');
+    // console.log(querySelectorTagName)
 
 </script>
