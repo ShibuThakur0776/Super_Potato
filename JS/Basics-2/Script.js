@@ -72,16 +72,16 @@
 // //****
 // //*****
 
-// //function in JS
-// //function header
+//function in JS
+//function header
 // function greet(){
 //     //function body
 //     console.log("Good Morning !");
 // }
 // const greet = ()=>console.log("Good Morning !");
-// greet();
+//  greet();
 
-// //function call()
+//function call()
 // for(i=0;i<=100;i++){
 //     greet();
 //     console.log("\n");
@@ -92,18 +92,18 @@
 // namaste();
 
 //EcmaScript 6 version
-//  let--> Local scope / var--> global scope,legacy  & const --> local scope -- initialization is mandatory, change is not possible
-// two types -- global--> anywhere in a program access , local --> inside a block access valid after that invalid 
+//let--> Local scope / var--> global scope,legacy  & const --> local scope -- initialization is mandatory, change is not possible
+//two types -- global--> anywhere in a program access , local --> inside a block access valid after that invalid 
 
-let a = 5;
-a = "Hello";
-console.log(a);
+// let a = 5;
+// a = "Hello";
+// console.log(a);
 
-fun();
+// fun();
 
-function fun(){
-    console.log("Hello World");
-}
+// function fun(){
+//     console.log("Hello World");
+// }
 
 
 

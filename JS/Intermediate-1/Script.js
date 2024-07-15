@@ -4,53 +4,55 @@
 //function is known as callback function
 
 // function printName(cb){
-//     console.log('Shikhar')
+//     console.log('Abhishek')
 //     // calling received callback function
 //     cb()
 // }
 // function printLastName(){
-//     console.log('Singh')
+//     console.log('Koundal')
 // }
 // function printAge(){
-//     console.log(24)
+//     console.log(26)
 // }
 // printName(printLastName) 
 // printName(printAge) 
 
 //Output 
-//Shikhar 
-//Singh 
-//Shikar
-//24
+//1st line call
+//Abhisekh
+//Koundal 
+//2nd line call
+//Abhisekh
+//26
 
 //We can also pass multiple callback 
 //functions
 // function printName(cb1, cb2, cb3){
-//     console.log('Shikhar')
+//     console.log('Rattan')
 //     cb1()
 //     cb2()
 //     cb3()
 // }
 // function printLastName(){
-//     console.log('Singh')
+//     console.log('Lal')
 // }
 // function printAge(){
 //     console.log(24)
 // }
 // function printAddress(){
-//     console.log('Delhi')
+//     console.log('Lakhnaur')
 // }
 // printName(printLastName, printAge, printAddress) 
-
-//Shikar
-//Singh
+//Output
+//Rattan
+//Lal
 //24
-//Delhi
+//Lakhnaur
 
 // Higher Order Function --> Higher-order functions are those functions
 // where the function is passed as an argument. 
-//This means that which callback function is passed as an argument.
-//With using higher order function --> code is cleaner, more readable and follows DRY 
+// This means that which callback function is passed as an argument.
+// With using higher order function --> code is cleaner, more readable and follows DRY 
 // let myRadiusArray = [2, 3, 4, 5, 8]
 
 // function circleArea(radius){
@@ -65,7 +67,7 @@
 // function calculateArea(radiusArr, logic){
 //     let result = []
 //     for(let i = 0 ; i < radiusArr.length ; i ++ ){
-//         result.push(logic(radiusArr[i]))
+//        result.push(logic(radiusArr[i]))
 //     }
 //     return result
 // }
@@ -73,39 +75,40 @@
 // console.log('This is area array => ', finalAreas)
 // let finalCircumferences = calculateArea(myRadiusArray, circleCircumference)
 // console.log('This is Circumference array =>', finalCircumferences)
-// let finalDiameter = calculateArea(myRadiusArray,  circleDiameter)
+// let finalDiameters = calculateArea(myRadiusArray,  circleDiameter)
 // console.log('This is Diameter array =>', finalDiameters)
 
 
 
-//Array Methods(Map, Filter, Reduce, etc) --> ! Important
+// Array Methods(Map, Filter, Reduce, etc) --> ! Important
 
-//arr - is a Data Structure, two or more types of primitive data types store
+// arr - is a Data Structure, two or more types of primitive data types store
 
-// arr - never manipulate or change your orginal array.
-
+//  arr - never manipulate or change your orginal array.
+//Map --> method in JS which is used to iterate or perform operation 
+//on the element of the array and returning new result array as a output 
 //Match IND vs Pak per over mein kitne ka run rate
-// let arr = [27,32,48,49,1];
+let arr = [27,32,48,49,1];
 // let runRate1 = [];
 
-// //JD code
+//JD code
 // for(let i=0; i<arr.length; i++){
 //     runRate1[i] = arr[i]/6;
 // }
 // console.log(runRate1);
 
-// //SD code
+//SD code
 // let runRate2 = arr.map((run)=> run/6);
 // console.log(runRate2);
 
-// //Total kitne run score
-// let Total = 0;
-// for(let i=0; i<arr.length; i++){
-//     Total += arr[i];
-// }
+//Total kitne run score
+let Total = 0;
+for(let i=0; i<arr.length; i++){
+    Total += arr[i];
+}
 
-// //orginal pe arr pe manipulation
-// console.log(Total);
+//orginal pe arr pe manipulation
+console.log(Total);
 
 
 //Problem Statement 
