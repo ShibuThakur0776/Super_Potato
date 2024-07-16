@@ -88,7 +88,7 @@
 //Map --> method in JS which is used to iterate or perform operation 
 //on the element of the array and returning new result array as a output 
 //Match IND vs Pak per over mein kitne ka run rate
-let arr = [27,32,48,49,1];
+// let arr = [27,32,48,49,1];
 // let runRate1 = [];
 
 //JD code
@@ -102,13 +102,13 @@ let arr = [27,32,48,49,1];
 // console.log(runRate2);
 
 //Total kitne run score
-let Total = 0;
-for(let i=0; i<arr.length; i++){
-    Total += arr[i];
-}
+// let Total = 0;
+// for(let i=0; i<arr.length; i++){
+//     Total += arr[i];
+// }
 
 //orginal pe arr pe manipulation
-console.log(Total);
+// console.log(Total);
 
 
 //Problem Statement 
@@ -117,11 +117,11 @@ console.log(Total);
 
 // const transactions = [1000,3000,4000,2000,-898,3800,-4500];
 // const inrToUsd = 80;
-// //map() --> 
-// //callback function on arr,
-// //then also iterate on that 
-// //and push it to the new array
-// //curr element, index, arr to return value
+//map() --> 
+//callback function on arr,
+//then also iterate on that 
+//and push it to the new array
+//curr element, index, arr to return value
 // let conversionToDollars = transactions.map(function(amount){
 //     return amount/inrToUsd;
 // })
@@ -190,16 +190,17 @@ console.log(Total);
 // console.log(ans);
 
 
-//Reduce --> Reduce array into one value.
+//Reduce --> Reduce array into (sum) of all values present in array one value.
 //Output --> Single value return.
 
 // let arr = [1,2,3,4,5];
 // let totalSum = arr.reduce(function(acc,num){
 //     acc = acc + num;
-//     console.log(acc);
+//     //console.log(acc);
 //     return acc;
-// },0)
+// },0);
 
+// console.log(totalSum);
 
 
 
