@@ -86,3 +86,118 @@
 // //Accessing properties of the instances 
 // console.log(person1.name);
 // console.log(car1.model);
+
+//Class --> blueprint & no memory is taken by the class
+// class Person{
+//     constructor(name,age){
+//         this.name = name;
+//         this.age = age;
+//     }
+// //Prototype Method 
+// greet(){
+//     console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+// }
+// //Static Method
+// static compareAges(person1, person2){
+//     if(person1.age > person2.age){
+//         return `${person1.name} is older than ${person2.name}.`;
+//     }else if(person1.age < person2.age){
+//         return `${person2.name} is older than ${person1.name}.`;
+//     }else{
+//         return `${person1.name} and ${person2.name} are the same age`;
+//     }
+// }
+// }
+
+// //object/instance is created using new keyword
+// const abhishekObj = new Person("Abhishek",24);
+// abhishekObj.greet();
+// const shivamObj = new Person("Shivam",20);
+// shivamObj.greet();
+
+// console.log(Person.compareAges(abhishekObj,shivamObj));
+
+//Inheritance in JS
+// Parent class (Superclass)
+// class Person {
+//     constructor(name, age) {
+//       this.name = name;
+//       this.age = age;
+//     }
+  
+//     greet() {
+//       console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+//     }
+//   }
+  
+//   // Child class (Subclass)
+//   class Student extends Person {
+//     constructor(name, age, grade) {
+//       super(name, age); // Call the parent class constructor
+//       this.grade = grade;
+//     }
+  
+//     study() {
+//       console.log(`${this.name} is studying hard for their exams.`);
+//     }
+//   }
+  
+//   // Creating instances of the subclasses
+//   const person = new Person("Rattan", 30);
+//   const student = new Student("Abhishek", 28, "12th");
+  
+//   // Using inherited methods and subclass-specific methods
+//   person.greet();    // Output: Hello, my name is Rattan and I am 30 years old.
+//   student.greet();   // Output: Hello, my name is Abhishek and I am 28 years old.
+//   student.study();   // Output: Abhishek is studying hard for their exams.
+
+//Super Keyword
+// Parent class
+class Person {
+    constructor(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+  
+    introduce() {
+      console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    }
+  }
+  
+  // Subclass: Student
+  class Student extends Person {
+    constructor(name, age, grade) {
+      super(name, age); // Call parent class's constructor using super()
+      this.grade = grade;
+    }
+  
+    study() {
+      console.log(`${this.name} is studying.`);
+    }
+  }
+  
+  // Subclass: Teacher
+  class Teacher extends Person {
+    constructor(name, age, subject) {
+      super(name, age);
+      this.subject = subject;
+    }
+  
+    teach() {
+      console.log(`${this.name} is teaching ${this.subject}.`);
+    }
+  }
+  
+  // Creating instances
+  const person = new Person("Rattan", 24);
+  const student = new Student("Abhishek", 24, "12th");
+  const teacher = new Teacher("Shivam", 20, "Javascript");
+  
+  // Using methods and properties
+  person.introduce(); // Output: Hello, my name is Rattan and I am 24 years old.
+  
+  student.introduce(); // Output: Hello, my name is Abhishek and I am 24 years old.
+  student.study();     // Output: Abhishek is studying.
+  
+   teacher.introduce(); // Output: Hello, my name is Shivam and I am 20 years old.
+   teacher.teach();     // Output: Shivam is teaching Javascript.
