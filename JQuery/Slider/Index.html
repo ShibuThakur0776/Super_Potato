@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+    <div id="background-slider">
+        <img id="slider-1" class="slides" src="./images/img-1.jpg" alt="img-1"/>
+        <img id="slider-2" class="slides" src="./images/img-2.jpg" alt="img-2"/>
+        <img id="slider-3" class="slides" src="./images/img-3.jpg" alt="img-3"/>
+        <img id="slider-4" class="slides" src="./images/img-4.jpg" alt="img-4"/>
+    </div>
+    <button value="submit"></button>
+    </div>
+</body>
+<script src="../jquery/jquery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var indexer = 0;
+        var animateInterval;
+
+        function animate(){
+            if(indexer==0){
+                $("#background-slider > #slider-4").fadeOut(2000);
+                $("#background-slider > #slider-1").fadeIn(2000);
+            }else if(indexer==1){
+                $("#background-slider > #slider-1").fadeOut(2000);
+                $("#background-slider > #slider-2").fadeIn(2000);
+            }else if(indexer==2){
+                $("#background-slider > #slider-2").fadeOut(2000);
+                $("#background-slider > #slider-3").fadeIn(2000);
+            }else if(indexer==3){
+                $("#background-slider > #slider-3").fadeOut(2000);
+                $("#background-slider > #slider-4").fadeIn(2000);
+            }
+
+            if(indexer==3) indexer=0;
+            else indexer++;
+        }
+        animateInterval = setInterval(animate,5000);
+        animate();
+    })
+</script>
+</html>
