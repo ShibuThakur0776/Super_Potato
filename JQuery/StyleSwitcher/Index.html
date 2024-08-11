@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleSwitcher</title>
+    <link href="day.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Change Theme</h1>
+    <button data-file="day">Day</button>
+    <button data-file="night">Night</button>
+</body>
+<script src="../jquery/jquery-3.7.1.min.js"></script>
+<script>
+    (function(){
+        var link = $('link');
+        $('button').on('click',function(){
+            var $this = $(this);
+            var stylesheet = $this.data('file');
+            link.attr('href',stylesheet+'.css');
+            $this.siblings('button').removeAttr('disabled').end().attr('disabled','disabled');
+        })
+    })();
+</script>
+</html>
