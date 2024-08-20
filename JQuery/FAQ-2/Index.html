@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-size: 24px;
+            font-family:'Courier New', Courier, monospace;
+            font-weight: bold;
+
+        }
+        .container{
+            width: 500px;
+            margin: 150px 350px;
+            background-color: black;
+            color: whitesmoke;
+            padding: 50px 80px;
+
+        }
+        .ques{
+            margin: 10px;
+            
+        }
+        .ans{
+            padding-left: 20px;
+
+        }
+        .btn{
+            margin-left: 10px;
+            padding: 2px 5px;
+            border-radius: 40%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ques">What is are upto ??<button class="btn">+</button></div>
+        <div class="ans">Top notch coders alive.</div>
+        <div class="ques">What is are upto ??<button class="btn">+</button></div>
+        <div class="ans">Top notch coders alive.</div>
+        <div class="ques">What is are upto ??<button class="btn">+</button></div>
+        <div class="ans">Top notch coders alive.</div>
+        <div class="ques">What is are upto ??<button class="btn">+</button></div>
+        <div class="ans">Top notch coders alive.</div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var btn = $('.btn');
+        btn.parent().next().hide();
+        btn.html('+');  
+
+        btn.on('click',function(){
+            var $this = $(this);
+            console.log(typeof $this.html());
+            if($this.html()=="+"){
+                $this.parent().next().slideDown(1000).show();
+                $this.html("-");
+            }else{
+                $this.parent().next().slideUp(1000).hide();
+                $this.html("+");
+            }
+          
+             
+        })
+    });
+</script>
+</html>
