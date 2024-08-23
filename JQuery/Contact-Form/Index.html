@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-Form</title>
+</head>
+<style>
+    #contact{
+        width: 500px;
+        border: 2px solid black;
+        margin: auto 350px;
+        padding: 10px 40px;
+    }
+    form{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px 0;
+        grid-auto-rows: min-max(100px,auto);
+    }
+    h2{
+        align-items: center;
+        grid-row: 0;
+        grid-column: 2/2;
+        
+    }
+
+</style>
+<body>
+    <div class="container">
+        <article>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, dicta. Incidunt ab adipisci veniam impedit, pariatur, est beatae sunt deleniti itaque culpa et enim inventore architecto, cumque cupiditate expedita soluta!
+        </article>
+        
+        <div id="contact">
+            <form action="#">
+                <h2>Contact-Form</h2>
+                <label for="name">Name :</label>
+                <input type="text" id="name" placeholder="Enter the name" />
+                <label for="age">Age :</label>
+                <input type="number" id="age" placeholder="Enter the age" />
+                <label for="address">Address :</label>
+               <textarea id="address" rows="20" cols="50"></textarea>
+                
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
