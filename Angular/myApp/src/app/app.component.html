@@ -1,0 +1,8 @@
+<app-post [img]="imgURL" (imgSelected)="logImg($event)">
+  <p>some caption</p>
+</app-post>
+<input type="text" (keyup)="onChangeImage($event)" [value]="imgURL"/>
+
+<p class="app">Hi {{name}}</p>
+<p>Hi {{getName()}}</p>
+<p>{{13+15}}</p>
