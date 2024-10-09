@@ -1,15 +1,18 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { DataService } from '../service/data.service';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
 export class CardComponent {
-  @Input() imgURL: any;
-  @Input() title: any;
-  @Input() description: any;
-  constructor(){}
+  cardInfo: any;
+  constructor(private data:DataService){
+    this.cardInfo = data.getData();
+  }
+ 
 }

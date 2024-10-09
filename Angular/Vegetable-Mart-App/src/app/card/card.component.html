@@ -1,12 +1,18 @@
-<div class="col">
-    <div class="card h-100">
-    <img src={{imgURL}} class="card-img-top" alt="img-1">
-    <div class="card-body">
-        <h5 class="card-title">{{title}}</h5>
-        <p class="card-text">{{description}}</p>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div *ngFor="let card of cardInfo; let i=index;">
+        <div class="col">
+            <div class="card h-100">
+            <img src={{card.imgURL}} class="card-img-top" alt="img-1">
+            <div class="card-body">
+                <h5 class="card-title">{{card.title}}</h5>
+                <p class="card-text">{{card.description}}</p>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary">Buy Now</button>
+            </div>
+            </div>
+        </div>
     </div>
-    <div class="card-footer">
-        <button class="btn btn-primary">Buy Now</button>
-    </div>
-    </div>
-</div>
+  </div>
+
+
