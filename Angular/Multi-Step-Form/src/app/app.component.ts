@@ -1,13 +1,27 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'multi-step-form';
+currentStep:number=1; 
+  constructor(){
+  }
+
+  gotoNextStep(activeStep:number){
+    if(activeStep<3)
+    this.currentStep = activeStep+1;
+  }
+  backToPrevious(activeStep:number){
+    if(activeStep>1){
+      this.currentStep = activeStep-1;
+    }
+  }
 }
