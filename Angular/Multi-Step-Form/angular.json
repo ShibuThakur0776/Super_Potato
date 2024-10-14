@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "wizard-navigation": {
+    "multi-step-form": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/wizard-navigation",
+            "outputPath": "dist/multi-step-form",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "wizard-navigation:build:production"
+              "buildTarget": "multi-step-form:build:production"
             },
             "development": {
-              "buildTarget": "wizard-navigation:build:development"
+              "buildTarget": "multi-step-form:build:development"
             }
           },
           "defaultConfiguration": "development"
