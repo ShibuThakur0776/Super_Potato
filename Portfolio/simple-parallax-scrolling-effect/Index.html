@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <img src="./images/bg.jpg" id="bg" alt="background-image">
+        <img src="./images/moon.png" id="moon" alt="moon">
+        <img src="./images/mountain.png" id="mountain" alt="mountain">
+        <img src="./images/road.png" id="road" alt="road">
+        <h2 id="text">Moon light</h2>
+    </section>
+    <div>
+        <h3>Parallax Background Scroll</h3s>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nesciunt cupiditate numquam nobis molestias doloremque molestiae hic quos excepturi nostrum, at animi mollitia nisi. Hic maxime possimus consequatur necessitatibus ipsa.
+        Voluptate blanditiis enim voluptas ad temporibus ea itaque! Maxime quibusdam animi non ipsam iste, delectus accusantium eligendi id consequuntur ipsa similique provident? Reprehenderit sed distinctio at voluptatibus ipsum temporibus eos?
+        Minus, quaerat omnis voluptatibus temporibus nobis blanditiis accusantium error harum veritatis et ipsa nesciunt ad voluptate placeat maxime tenetur. Quae odit neque aliquid laudantium nam iure aperiam nobis ipsam aspernatur!
+        Inventore ducimus laudantium molestiae asperiores aut mollitia sunt quidem fugit provident cupiditate fuga delectus commodi magnam ipsum molestias, recusandae aperiam harum natus tempore? Sequi facilis, eveniet aspernatur dicta vel dolor?
+        Nostrum sapiente, placeat nam quam impedit maxime corrupti, odit, consequuntur vel dolorem expedita eaque iure nemo fugiat omnis earum fugit! Est nulla ullam blanditiis. Obcaecati blanditiis ut quia. Delectus, doloremque.
+        Dicta voluptatibus quasi consequuntur quos. Laboriosam accusantium quidem pariatur accusamus quos minus asperiores architecto cumque aperiam, illum veniam corporis inventore, harum quam, itaque deserunt assumenda eaque dignissimos aliquam perspiciatis nihil!
+        Earum, laborum. Quos maiores quibusdam unde similique in sequi asperiores eveniet ab! Nulla, distinctio corrupti odit totam modi non vitae quasi recusandae. Id numquam perspiciatis eos, ut atque aspernatur obcaecati.
+        Quos error voluptates rem veniam? Fugit id laboriosam maiores ex ducimus, numquam voluptatem libero odio reprehenderit sed nisi vero a excepturi sapiente tempora corporis, esse est facilis dolorem enim. Quam.
+        Ad eaque nemo qui. Quis vitae enim eos ullam pariatur quae eius ad officia modi, ut dolorem ab porro quibusdam perferendis, natus dolor impedit fugiat labore numquam, amet nisi minus?
+        Voluptatem cum ipsam praesentium sapiente tenetur minima natus, vero quos perspiciatis quas maiores dicta doloremque perferendis eveniet cumque hic amet voluptas? Fuga, deleniti molestiae. Reiciendis dicta molestias nostrum blanditiis minus?</p>
+    </div>
+</body>
+</html>
+<script>
+let bg = window.document.getElementById("bg");
+let moon = document.getElementById("moon");
+let mountain = document.getElementById("mountain");
+let road = document.getElementById("road");
+let text = document.getElementById("text");
+
+window.addEventListener('scroll', function () {
+    var value = window.scrollY;
+    bg.style.top = value * 0.5 + 'px';
+    moon.style.left = -value * 0.5 + 'px';
+    mountain.style.top = -value * 0.15 + 'px';
+    road.style.top = value * 0.15 + 'px';
+    text.style.top = value * 1 + 'px';
+});
+
+</script>
